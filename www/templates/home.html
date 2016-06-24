@@ -1,0 +1,31 @@
+<div class="slider-wrap">
+			<div class="block">
+				<div class="slider">
+					<img src="img/slider1.jpg" alt="sliderImg1">
+					<ul class="switch">
+						<li data-num='1'></li>
+						<li data-num='2'></li>
+						<li data-num='3'></li>
+						<li data-num='4'></li>
+						<li data-num='5'></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<div class="block">
+				<h3>Привет! Я Виталий Скрипка и это мой сайт, посвященный моим друзьям. Мы &mdash; долбоебы!</h3>
+				<hr>
+				<ul>
+					<li ng-repeat='video in videos'>
+						<h4>{{video.name}}</h4>
+						<p>{{video.text}}</p>
+						<img src="{{video.image}}" alt="perfect">
+						<p>{{video.snippet}}</p>
+						<a href="{{video.url}}" class="learn">Watch</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<script src="script.js"></script>
+		

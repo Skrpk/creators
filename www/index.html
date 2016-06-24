@@ -1,104 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" ng-app='banditsApp'>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Уебкесы</title>	
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="script.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="controllers.js"></script>
 </head>
-<body>
+<body ng-controller='infoCtrl'>
 	<div class="wrapper">
-		<div class="block">
-			<div id="header">
+		<div id="header">
+			<div class="block">
 				<img src="img/logo.png" alt="logo" id='logo'>
 				<ul id="menu">
 					<li>
+						<a href="#/contacts">
+							<h4>Контакты</h4>
+							<span>Как меня найти</span>
+						</a>
+					</li>
+					<li id="we">
 						<a href="#">
-							<h4>contact</h4>
-							<span>Ways to reach us</span>
+							<h4>Мы</h4>
+							<span>Кто мы такие</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<h4>blog</h4>
-							<span>Follow our updates</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<h4>services</h4>
-							<span>Things we do</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<h4>products</h4>
-							<span>What we have for fun</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-						<h4>home</h4>
-						<span>Back to home</span>
+						<a href="#/">
+						<h4>Главная</h4>
+						<span>На главную</span>
 						</a>
 					</li>
 				</ul>
-			</div>
-		</div>
-		<div class="slider-wrap">
-			<div class="block">
-				<div class="slider">
-					<img src="img/slider1.jpg" alt="sliderImg1">
-					<ul class="switch">
-						<li data-num='1'></li>
-						<li data-num='2'></li>
-						<li data-num='3'></li>
-						<li data-num='4'></li>
-						<li data-num='5'></li>
+				<div class="pop-up">
+					<ul>
+						<li ng-repeat="bandit in bandits">{{bandit.name}}</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="info">
-			<div class="block">
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-				<hr>
-				<ul>
-					<li>
-						<h4><a href="#">Perfect Logic</a></h4>
-						<p>All you want your website to do.</p>
-						<img src="img/perfect.png" alt="perfect">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ratione veritatis tempora beatae temporibus, itaque deserunt quibusdam quidem fuga totam maiores, iure velit perferendis repellat dignissimos quasi pariatur. Veritatis, dolorum.</p>
-						<a href="#" class="learn">Learn more</a>
-					</li>
-					<li>
-						<h4><a href="#">Complete Solution</a></h4>
-						<p>A tool anything and everything you can think</p>
-						<img src="img/complete.png" alt="complete">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ratione veritatis tempora beatae temporibus, itaque deserunt quibusdam quidem fuga totam maiores, iure velit perferendis repellat dignissimos quasi pariatur. Veritatis, dolorum.</p>
-						<a href="#" class="learn">Learn more</a>
-					</li>
-					<li>
-						<h4><a href="#">Uber Culture</a></h4>
-						<p>Fresh. Modern and ready for future</p>
-						<img src="img/uber.png" alt="uber">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ratione veritatis tempora beatae temporibus, itaque deserunt quibusdam quidem fuga totam maiores, iure velit perferendis repellat dignissimos quasi pariatur. Veritatis, dolorum.</p>
-						<a href="#" class="learn">Learn more</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<ng-view></ng-view>
 		<footer>
 			<div class="block">
-				<div class="block">
-					<ul class="social">
-					<li><a href="http://www.twitter.com"></a></li>
-					<li><a href="#" class="linkedin"></a></li>
-					<li><a href="#" class="facebook"></a></li>
+				<ul class="social">
+					<li><a href="https://twitter.com/v_violin1"></a></li>
+					<li><a href="https://www.linkedin.com/in/vitali-skripka-272162114?trk=nav_responsive_tab_profile_pic" class="linkedin"></a></li>
+					<li><a href="https://www.facebook.com/vitali.skripka1" class="facebook"></a></li>
 				</ul>
-				<p>Copyright В© 2016 Business. All rights reserved. Designed by Vitali Skripka, motherfuckers!</p>
-				</div>
+				<p>Copyright В© 2016. Designed by Vitali Skripka, motherfuckers!</p>
 			</div>
 		</footer>
 	</div>
