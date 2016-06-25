@@ -25,6 +25,7 @@ a{
 
 #header {
 	position: relative;
+	background-color: #F4F4F4;
 	height: 140px;
 }
 
@@ -266,3 +267,72 @@ footer p {
 	display: table;
 	clear: both;
 }
+
+
+
+					/*    CONTACTS BEGINS    */
+
+.contacts {
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	padding: 50px 0;
+}
+
+.temp {
+	color: #829399;
+	font-size: 12px;
+}
+
+.contacts-group {
+	margin-bottom: 25px;
+}
+
+.data {
+	line-height: 1.125em;
+	color: #435972;
+	position: absolute;
+	left: 450px;
+}
+
+.networks {
+	margin-left: -40px;
+	margin-top: 0px;
+}
+
+.social-bg {
+	width: 20px;
+	height: 20px;
+	float: left;
+	background: url('img/p-soc-icons.png') no-repeat 0 0;
+}
+
+.wrap-soc {
+	width: 224px;
+	float:left;
+}
+
+.mail {
+	background-position: -279px 0;
+}
+
+.fb {
+	background-position: -107px 0;
+}
+
+.twitter {
+	background-position: -142px -36px;
+}
+
+.inst {
+	background-position: -141px 0;
+}
+
+.vk {
+	background-position: -35px -62px;
+}
+
+.contacts-group:last-child {
+	margin-top: 112px;
+}
+
+					/*    CONTACTS ENDS    */
