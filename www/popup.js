@@ -1,23 +1,26 @@
 $(function() {
-	$('#we').hover(function () {
-		if ($('.pop-up').css('display') === 'none') {
+
+	var isOpened = false;
+
+	$('#we').click(function () {
+		if (!isOpened) {
 			$('.pop-up').slideDown(500);
-		} else {
-			$(this).css('display', 'block');
-		}
-	}, function () {
-		if ($(".pop-up").is(":hover")) {
-			$(this).css('display', 'block');
 		} else {
 			$('.pop-up').slideUp(500);
 		}
+
+		isOpened = !isOpened;
 	});
 
-	$('.pop-up').hover(function () {
-		$(this).css('display', 'block');
-	},
-	function () {
-		if (!$("#we").is(":hover"))
-		$('.pop-up').slideUp(500);
-	});
+	var firstClick = true;
+    $(document).click(function(e) {
+    	var a = ($(e.target).attr('id') == 'we') || 
+    				($(e.target).parent().parent().attr('id') == 'we') ||
+    				($(e.target).parent().attr('id') == 'we');
+        if (!firstClick && !a) {
+            $('.pop-up').slideUp(500);
+            isOpened = false;
+        }
+        firstClick = false;
+    });
 });

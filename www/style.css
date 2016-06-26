@@ -46,6 +46,7 @@ a{
 	margin-left: 5px;
 	padding-left: 10px;
 	padding-right: 8px;
+	cursor: pointer;
 }
 
 #menu h4{
@@ -64,11 +65,11 @@ a{
 
 .pop-up {
 	display: none;
-	width: 130px;
+	width: 150px;
 	position: absolute;
 	left: 900px;
 	top: 80px;
-	/*border: 1px solid #000;*/
+	font-family: 'Roboto', sans-serif;
 	border-top: none;
 	z-index: 1;
 	background-color: #F7F7F7;
